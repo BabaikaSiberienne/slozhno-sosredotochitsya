@@ -18,8 +18,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+li {
   margin: 0;
+  padding:0;
 }
 
 ul {
@@ -39,4 +41,8 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+html {
+  block-size: 100%;
 }
