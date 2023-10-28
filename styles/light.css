@@ -10,6 +10,10 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background-image: url(/images/cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --text-color: #353430;
+  --title-color: #FFC2E6;
+  --paragraph__title-color: #353430;
 }
 
 :root.theme-light {
@@ -41,7 +45,6 @@
     font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
-    padding: 1.25rem;
   }
 
   .decorated_rec {
@@ -89,3 +92,4 @@
 
 
 /* Остальные стили */
+

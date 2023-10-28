@@ -10,7 +10,6 @@
     font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
-    padding: 1.25rem;
     color: var(--paragraph__title-color);
   }
   
@@ -19,10 +18,9 @@
   }
   
   .header {
-    /* padding: 1.25rem; */
+    padding: 1.25rem 0;
     position: relative;
     padding-bottom: 1.253rem;
-    /* n */
   }
 
   .head-of-header {
@@ -44,6 +42,7 @@
   }
 
   .header__theme-menu-item:focus {
+    border: none;
     border-bottom: 1px solid var(--accent-color);
   }
 
@@ -72,7 +71,7 @@
     content: "";
     width: 3%;
     height: 22px;
-    background-image: url(/images/Ellipse\ 4.png);
+    background-image: url("/images/Ellipse\ 4\ \(1\).png");
     background-repeat: no-repeat;
     object-fit: cover;
     margin-left: 0.625rem;
@@ -152,7 +151,8 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(1, 1fr);
-    /* padding: 0 1.25rem; */
+    padding: 0 1.25rem;
+    gap: 1.25rem;
   }
   
   .list__why-item:first-of-type {
@@ -181,7 +181,7 @@
     grid-template-rows: 20% 50% 30%;
     gap: 1.25rem;
     margin-block-start: 5rem;
-    /* padding: 0 1.25rem; */
+    padding: 0 1.25rem;
   }
   
   .what-title {
@@ -226,7 +226,7 @@
     "tape books ice-cream"
     "tape street street";
     gap: 1.25rem;
-    /* padding: 0 1.25rem; */
+    padding: 0 1.25rem;
     margin-bottom: 5rem;
   }
 
@@ -265,7 +265,7 @@
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr ;
     grid-template-rows: 2fr 1fr 2fr ;
-    padding-top: 1.25rem;
+    padding: 1.25rem;
     position: relative;
   }
   
