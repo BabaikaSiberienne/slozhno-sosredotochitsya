@@ -9,4 +9,9 @@
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --paragraph__title-color: #000028;
+  --font-family: 'IBM Plex Mono';
+  --font-style: 'normal';
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --margin-small: 1.25rem; 
 } 

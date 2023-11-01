@@ -14,14 +14,13 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: 'IBM Plex Mono';
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   --accent-color: #ff0070;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --paragraph__title-color: #000028;
-
   color: var(--paragraph__title-color);
 
 }
@@ -36,3 +35,18 @@
 
 /* Остальные стили */
 
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__rec {
+  color: var(--accent-color);
+  display: flex;
+  flex-direction: row;
+  line-height: 1.563rem;
+  grid-row: 1/1;
+  grid-column: 6/6;
+  align-self: end;
+  justify-self: end;
+  padding-right: 2rem;
+}

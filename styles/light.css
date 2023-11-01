@@ -42,15 +42,15 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'IBM Plex Mono';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
   }
 
-  .decorated_rec {
+  .header__rec {
     display: none;
+    
   }
-
   .decorated-zone::before {
     position: absolute;
     content: "";
@@ -73,10 +73,11 @@
     border-bottom: 1px solid var(--text-color);
   }
 
-  .day {
+  .header__theme-menu-button_active {
     border: 1px solid var(--text-color);
   }
-  .neon {
+
+  .header__theme-menu-item:last-of-type {
     border: none;
   }
 
@@ -85,11 +86,30 @@
   }
 
   .header__theme-menu-item:focus {
+    outline: none;
     border-bottom: 1px solid var(--text-color);
   }
 }
 
-
+.header__theme-menu-button_active {
+  outline: none;
+  border: 1px solid var(--text-color);
+}
 
 /* Остальные стили */
+/* .header__theme-menu-item:first-of-type {
+  border: 1px solid var(--text-color);
+}
 
+.header__theme-menu-item:last-of-type {
+  border: none; */
+
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--text-color);
+  }
+
+  .theme_light .header__rec {
+    display: none;
+    
+  }
