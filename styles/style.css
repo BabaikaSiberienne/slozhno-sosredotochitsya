@@ -8,7 +8,6 @@
     background-position: center;
     background-attachment: fixed;
     font-family: var(--font-family);
-    font-style: normal;
     font-weight: var(--font-weight-normal);
     font-size: 1.125rem;
     color: var(--paragraph__title-color);
@@ -18,21 +17,30 @@
   li {
     list-style-type: none;
   }
+
+  p {
+    color: var(--text-color);
+  }
   
+  p, h3 {
+    line-height: 23.4px;
+
+  }
+
   .header {
     /* padding: 1.25rem 0; */
     position: relative;
-    padding-bottom: 1.253rem;
-    margin-bottom: 11.5rem;
+    margin-bottom: 10.8rem;
     display: grid;
     grid-template-rows: 0.3fr 1.15fr 0.4fr 0.4fr 0.3fr;
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr
-  }
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+    padding: 0 1.25rem 1.253rem 0.3rem ;
+    }
 
   .header__theme-menu {
     grid-column: 3/5;
     grid-row: 1/2;
-    padding-top: 2rem;
+    padding-top: 2.4rem;
     padding-left: 2rem;
   }
 
@@ -41,19 +49,22 @@
     flex-direction: row;
     justify-content: center;
     text-transform: lowercase;
-    gap: 2.25rem;
-    padding-right: 2rem;
+    gap: 1.7rem;
+    /* margin-block-start: 0.5rem; */
   }
 
+  .header__theme-menu-item:last-of-type {
+    margin-right: 1rem;
+  }
   .header__theme-menu-button_active {
     border: 1px solid var(--accent-color);
   }
 
-  .header__theme-menu-item:hover {
+  .header__theme-menu-button:hover {
     border: 1px solid var(--accent-color);
   }
 
-  .header__theme-menu-item:focus {
+  .header__theme-menu-button:focus {
     outline: none;
     border-bottom: 1px solid var(--accent-color);
   }
@@ -78,19 +89,20 @@
     grid-column: 6/6;
     align-self: end;
     justify-self: end;
-    padding-right: 2rem;
+    padding-right: 1.6rem;
   }
   
   .header__rec::after {
     content: "";
     width: 3%;
     height: 22px;
-    background-image: url("/images/ellipse.png");
+    background-image: url("../images/ellipse.png");
     background-repeat: no-repeat;
     object-fit: cover;
     margin-left: 0.625rem;
     padding-right: 1rem;
     margin-top: 2px;
+    filter: drop-shadow(0px 0px 4px #FF0070);
   }
 
   .decorated-zone::before {
@@ -98,7 +110,8 @@
     content: "";
     height: 25px;
     width: 25px;
-    right: -17px;
+    right: 2.5rem;
+    top: 2.3rem;
     border-top: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
     border-top: 1px solid var(--accent-color);
@@ -109,7 +122,8 @@
     height: 25px;
     width: 25px;
     content: "";
-    bottom: 5rem;
+    top: 46.2rem;
+    left: 1rem;
     border-left: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
   }
@@ -118,19 +132,23 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: var(--title-color);
     font-weight: var(--font-weight-bold);
+    
   }
   
   .header__title {
     text-shadow: 4px 4px 0 var(--accent-color);
     grid-column: 1/6;
     grid-row: 3/3;
+    justify-self: start;
+    margin-right: 1rem;
   }
   
   .header__paragraph {
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
     grid-column: 4/7;
     grid-row: 5/5;
-
+    color: var(--paragraph__title-color);
+    font-weight: var(--font-weight-bold);
   }
   
   .h2__title {
@@ -146,17 +164,12 @@
     background-color: var(--accent-color);
   }
   
-  .line-height {
-    line-height: 1.463rem;
-  }
-
   .why {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(1, 1fr);
     padding: 0 1.25rem;
     gap: 1.25rem;
-    margin-top: -1rem;
   }
   
   .list__why-item:first-of-type {
@@ -167,18 +180,18 @@
     margin-block-end: 0.625rem;
   }
 
-  a {
+  .paragraph_link {
     text-decoration: none;
     text-shadow: 2px 2px 0px #FF0070;
   }
 
-  a:hover {
+  .paragraph_link:hover {
     text-decoration: none;
     text-shadow: 2px 2px 0px #FF0070;
     border-bottom: 1px solid var(--accent-color);
   }
   
-  a:focus {
+  .paragraph_link:focus {
     text-decoration: none;
     text-shadow: 2px 2px 0px #FF0070;
     border: 1px solid var(--accent-color);
@@ -189,7 +202,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 10% 50% 40%;
     gap: 1.25rem;
-    margin-block-start: 4.1rem;
+    margin-block-start: 5rem;
     padding: 0 1.25rem;
   }
   
@@ -212,19 +225,21 @@
     grid-column: 1;
   }
 
-  
+  .what__item p {
+    margin-block-start: 0.625rem;
+  }
   .to-do {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(1, 1fr);
-    margin-block-start: 4.5rem;
+    margin-block-start: 4rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem
   }
   
   
   .how p:not(:last-of-type) {
-    margin-block-end: 1.5rem;
+    margin-block-end: 1.2rem;
   }
 
   .how p:last-of-type {
@@ -294,7 +309,7 @@
   .footer {
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr ;
-    grid-template-rows: 1.6fr 1.07fr 1.1fr;
+    grid-template-rows: 1.60fr 1fr 1.20fr;
     padding: 1.25rem;
      position: relative;
   }
@@ -319,21 +334,21 @@
 
     .header {
       display: grid;
-      grid-template-rows: repeat(7, 0.3fr);
+      grid-template-rows: 0.3fr 0.6fr 1fr 0.9fr 0.1fr 0.8fr 0.8fr;
       grid-template-columns: repeat(3, 0.3fr);
+      margin-bottom: 14rem;
     }
 
-    .decorated_rec {
+    .header__rec {
       grid-row: 1/1;
-      grid-column: 8;
+      grid-column: 8/8;
       justify-content: start;
       justify-self: end;
-      align-self: flex-start;
     }
 
     .header__theme-menu {
-      
-      grid-row: 2/2;
+      gap: 0.2rem;
+      grid-row: 3/3;
       grid-column: 8/8;
     }
 
@@ -341,16 +356,47 @@
       display: flex;
       flex-direction: column;
       align-items: end;
+      gap: 0.5rem;
       /* padding-left: 2rem; */
     }
+    
+    .header__theme-menu-item:nth-of-type(1) {
+      margin-block-start: 1rem;
+    }
 
+    .header__theme-menu-item:nth-of-type(2) {
+      padding-bottom: 0.6rem;
+    }
+    .header__theme-menu-item:last-of-type {
+      margin-right: 0rem;
+    }
     .header__title {
-      grid-column: 1/6;
-      grid-row: 4/4;
+      display: grid;
+      grid-column-start: 1;
+      grid-column-end: span 6;
+      grid-row: 5/5;
     }
     
     .header__paragraph {
-      grid-column: 2/9;
-      grid-row: 6/6;
+      grid-column: 3/9;
+      grid-row: 7/7;
+    }
+
+    .what-title {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column: 1/1;
+    }
+
+    .to-do h2 {
+      padding-top: 1rem;
+    }
+
+    .how {
+      padding-top: 1rem;
+    }
+
+    .how h3 {
+      font-size: 1.125rem;
     }
   }

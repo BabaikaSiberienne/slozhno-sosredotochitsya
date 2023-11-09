@@ -14,9 +14,6 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 400;
   --accent-color: #ff0070;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
@@ -48,5 +45,45 @@
   grid-column: 6/6;
   align-self: end;
   justify-self: end;
-  padding-right: 2rem;
+  padding-right: 1.8rem;
+}
+
+.theme_dark .decorated-zone::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  right: 2.5rem;
+  top: 2.3rem;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.theme_dark .decorated-zone::after {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  content: "";
+  top: 46.2rem;
+  left: 1rem;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .theme_dark .header__rec {
+    grid-row: 1/1;
+    grid-column: 8/8;
+    justify-content: start;
+    justify-self: end;
+  }
+
+  .theme_dark .header {
+    margin-bottom: 14rem;
+  }
 }
